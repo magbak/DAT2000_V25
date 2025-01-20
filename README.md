@@ -23,6 +23,6 @@ docker build . -t myapp
 
 Kjøre docker 
 ```shell
-docker run myapp
+docker run -p 8000:8000 myapp
 ```
 

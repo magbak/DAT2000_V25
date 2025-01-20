@@ -12,7 +12,7 @@ async def hello(name: str="anon"):
     return f"Hello {name}"
 
 @app.get("/hellojson/", response_class=JSONResponse)
-async def hello(name: str):
+async def hellojson(name: str):
     return {"Received": name,
             "Response": f"Hello {name}"}
 
@@ -20,4 +20,10 @@ async def hello(name: str):
 async def read_item(request: Request, id: str):
     return templates.TemplateResponse(
         request=request, name="item.html", context={"id": id}
+    )
+
+@app.get("/sumtwo/", response_class=HTMLResponse)
+async def sumtwo(request: Request, a: int = 0, b: int = 10):
+    return templates.TemplateResponse(
+        request=request, name="sumtwo.html", context={"a": a, "b":b}
     )
