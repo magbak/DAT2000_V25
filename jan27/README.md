@@ -1,4 +1,4 @@
-## DAT 2000 Øving 26. Januar 2025
+## DAT 2000 Øving 27. Januar 2025
 
 ### Postgres
 
