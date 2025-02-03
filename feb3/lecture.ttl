@@ -1,0 +1,17 @@
+@prefix ex:<http://example.net/instances#> .
+@prefix pets:<http://example.net/pets#> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:<http://www.w3.org/2002/07/owl#> .
+
+ex:John pets:hasPet ex:Fido1 .
+ex:John pets:hasPet ex:Garfield .
+ex:John a ex:Boy .
+ex:Lucy pets:hasPet ex:Nemo .
+ex:Lucy pets:hasPet ex:Fido2 .
+ex:Nemo a pets:Fish .
+ex:Garfield a pets:Cat .
+ex:Fido1 a pets:Dog .
+ex:Fido2 a pets:Dog .
+ex:Fido1 rdfs:label "Fido".
+ex:Fido2 rdfs:label "Fido".
