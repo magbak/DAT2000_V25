@@ -9,7 +9,9 @@ class Store:
         # self.sparse_index = ????
 
     def get_naive(self, k:str):
-        # Skriv koden din her!!!
+        for (k2, v) in self.table:
+            pass
+            # Skriv koden din her!!!
         return None
 
     def create_sparse_index(self):
