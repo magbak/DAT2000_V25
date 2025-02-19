@@ -1,0 +1,2 @@
+pytest
+psycopg[binary,pool]
