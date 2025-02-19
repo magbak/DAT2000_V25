@@ -24,4 +24,18 @@ def test_transfer(mybank):
     mybank.add_customer("Ola", 750.0)
     mybank.add_customer("Kari", 100.0)
     result = mybank.transfer("Ola", "Kari", 500.0)
-    # Legg til asserts som sjekker at dette gikk riktig gjennom her!
+    assert result
+    amount_ola = mybank.get_amount("Ola")
+    assert amount_ola == 250.0
+    amount_kari = mybank.get_amount("Kari")
+    assert amount_kari == 600.0
+
+def test_transfer_insufficient_funds(mybank):
+    mybank.add_customer("Ola", 499.99)
+    mybank.add_customer("Kari", 100.0)
+    result = mybank.transfer("Ola", "Kari", 500.0)
+    assert not result
+    amount_ola = mybank.get_amount("Ola")
+    assert amount_ola == 499.99
+    amount_kari = mybank.get_amount("Kari")
+    assert amount_kari == 100.0
